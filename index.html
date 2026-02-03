@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Madame 💗</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(#ffd1dc, #ffe6ee);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Floating balloons */
+.balloon {
+  position: fixed;
+  bottom: -120px;
+  width: 40px;
+  height: 55px;
+  background: rgba(255, 182, 193, 0.7);
+  border-radius: 50%;
+  animation: float 12s linear infinite;
+}
+.balloon::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 40px;
+  background: #fff;
+  left: 50%;
+  top: 55px;
+}
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
+
+/* Cupid */
+.cupid {
+  position: fixed;
+  top: 20%;
+  left: -80px;
+  font-size: 40px;
+  animation: fly 18s linear infinite;
+}
+@keyframes fly {
+  to { left: 110%; }
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3em;
+  margin-top: 30px;
+  color: #b30059;
+}
+
+.question {
+  max-width: 90%;
+  margin: 20px auto;
+  font-size: 1em;
+  color: #4d0033;
+}
+
+.memory {
+  margin: 25px auto;
+}
+.memory img {
+  width: 85%;
+  max-width: 300px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  margin-bottom: 15px;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+button {
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1em;
+  margin: 10px;
+  cursor: pointer;
+}
+#yes {
+  background: #ff4d88;
+  color: white;
+}
+#no {
+  background: #aaa;
+  color: white;
+  position: relative;
+}
+
+/* Final letter */
+#letter {
+  display: none;
+  margin: 30px auto;
+  max-width: 90%;
+  background: rgba(255,255,255,0.85);
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 1em;
+  color: #4d0033;
+}
+
+/* Hearts */
+.heart {
+  position: fixed;
+  font-size: 20px;
+  animation: rise 4s linear forwards;
+}
+@keyframes rise {
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Balloons -->
+<div class="balloon" style="left:10%; animation-delay:0s"></div>
+<div class="balloon" style="left:30%; animation-delay:3s"></div>
+<div class="balloon" style="left:60%; animation-delay:6s"></div>
+<div class="balloon" style="left:80%; animation-delay:9s"></div>
+
+<!-- Cupid -->
+<div class="cupid">🏹💘</div>
+
+<h1>May I ask you this, Madame 🥺?</h1>
+
+<div class="question">
+It’s not <i>will you be my Valentine</i>…<br><br>
+But would you like to choose <b>myself</b> to be your Valentine —<br>
+forever and ever, please 🥹 Madame
+</div>
+
+<div class="memory">
+  <img src="stage.jpg" alt="Memory 1">
+  <img src="classroom.jpg" alt="Memory 2">
+</div>
+
+<div class="buttons">
+  <button id="yes">💖 Yes</button>
+  <button id="no">💔 No</button>
+</div>
+
+<div id="letter">
+  <p>
+  Madame,<br><br>
+  This isn’t a proposal born of urgency,<br>
+  but of patience.<br><br>
+  If you allow it,<br>
+  I would like to walk beside you —<br>
+  not ahead, not behind —<br>
+  just… with you.<br><br>
+  Always,<br>
+  <b>Phoenix</b> 🤍
+  </p>
+</div>
+
+<audio id="music" src="mayabi-chand.mp3"></audio>
+
+<script>
+const noBtn = document.getElementById("no");
+noBtn.addEventListener("touchstart", moveNo);
+noBtn.addEventListener("mouseover", moveNo);
+
+function moveNo() {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 100);
+  noBtn.style.position = "absolute";
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+}
+
+document.getElementById("yes").onclick = () => {
+  document.getElementById("music").play();
+  document.getElementById("letter").style.display = "block";
+  for (let i = 0; i < 20; i++) {
+    const h = document.createElement("div");
+    h.className = "heart";
+    h.innerText = "💖";<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Valentine Surprise</title>
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffc0cb, #ffb6c1);
+    font-family: 'Cursive', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1 {
+    font-size: 2rem;
+    color: #e60073;
+}
+p {
+    font-size: 1.2rem;
+    color: #ff1a75;
+    max-width: 300px;
+    margin: 15px auto;
+}
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s;
+}
+#yes { background: #ff3366; color: white; }
+#no { background: #999; color: white; }
+#no:hover { animation: bounce 0.6s infinite; position: relative; }
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Balloons */
+.balloon {
+    width: 40px;
+    height: 60px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+    animation: float 6s infinite ease-in;
+}
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+<body>
+
+<h1>May I ask you this, Madame 🥺?</h1>
+
+<img src="stage.jpg" width="200px" style="margin:10px;">
+<img src="classroom.jpg" width="200px" style="margin:10px;">
+
+<p>It's not <i>will you be my Valentine</i>…<br>
+But would you like to choose <b>myself</b> to be your Valentine — forever and ever, please 🥹 Madame</p>
+
+<button id="yes">❤️ Yes</button>
+<button id="no">💔 No</button>
+
+<audio id="music" src="mayabi-chand.mp3"></audio>
+
+<script>
+// Bounce No button away when hovered
+const noBtn = document.getElementById('no');
+noBtn.addEventListener('mouseover', () => {
+    const x = Math.random() * (window.innerWidth - 100);
+    const y = Math.random() * (window.innerHeight - 50);
+    noBtn.style.position = 'absolute';
+    noBtn.style.left = x + 'px';
+    noBtn.style.top = y + 'px';
+});
+
+// Show final question when Yes clicked
+document.getElementById('yes').addEventListener('click', () => {
+    document.querySelector('p').innerHTML = "It's not 'will you be my Valentine' but would you like to choose <b>myself</b> to be your Valentine for ever and ever, please 🥹 Madame";
+    document.getElementById('music').play();
+});
+
+// Generate random balloons
+for(let i=0;i<15;i++){
+    const balloon = document.createElement('div');
+    balloon.classList.add('balloon');
+    balloon.style.left = Math.random()*window.innerWidth + 'px';
+    balloon.style.background = `hsl(${Math.random()*360}, 70%, 60%)`;
+    document.body.appendChild(balloon);
+}
+</script>
+
+</body>
+</html>
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.bottom = "0";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 4000);
+  }
+};
+</script>
+
+</body>
+</html>
